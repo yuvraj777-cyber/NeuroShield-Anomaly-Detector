@@ -1,1 +1,15 @@
+<!DOCTYPE html><html>
+<head>
+    <title>NeuroShield Anomaly Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body><div class="container"><h1>NeuroShield Anomaly Detector</h1>
 
+<h2>Detected Anomalies: {{ anomaly_count }}</h2>
+
+{% for table in tables %}
+    {{ table|safe }}
+{% endfor %}
+
+</div></body>
+</html>
